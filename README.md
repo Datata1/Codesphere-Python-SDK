@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://codesphere.com/img/codesphere-dark.svg" alt="Codesphere API SDK Banner">
+  <img src="https://signup.codesphere.com/img/codesphere-circle.svg" alt="Codesphere API SDK Banner">
 </p>
 
 <h1 align="center">Codesphere Python SDK</h1>
