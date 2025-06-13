@@ -29,7 +29,15 @@ from codesphere_sdk.configuration import Configuration
 from codesphere_sdk.api_response import ApiResponse, T as ApiResponseT
 import codesphere_sdk.models
 from codesphere_sdk import rest
-from codesphere_sdk.exceptions import ApiValueError, ApiException
+from codesphere_sdk.exceptions import (
+    ApiValueError,
+    ApiException,
+    BadRequestException,
+    UnauthorizedException,
+    ForbiddenException,
+    NotFoundException,
+    ServiceException,
+)
 
 RequestSerialized = Tuple[str, str, Dict[str, str], Optional[str], List[str]]
 

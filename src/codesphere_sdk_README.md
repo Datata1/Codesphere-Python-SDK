@@ -57,8 +57,8 @@ configuration = codesphere_sdk.Configuration(
 async with codesphere_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = codesphere_sdk.DomainsApi(api_client)
-    team_id = 3.4 # float |
-    domain_name = 'foo.example.com' # str |
+    team_id = 3.4 # float | 
+    domain_name = 'foo.example.com' # str | 
 
     try:
         # createDomain
@@ -163,3 +163,7 @@ Authentication schemes defined for the API:
 
 
 ## Author
+
+
+
+

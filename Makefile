@@ -39,10 +39,21 @@ bump: ## Bumps version, updates changelog, and creates a git tag
 	@echo ">>> Bumping version and generating changelog..."
 	uv run cz bump --changelog
 
-generate: ## Regenerates the SDK client from the openapi.json file (?TODO: download latest openapi.json)
-	@echo ">>> Generating Python SDK from openapi.json..."
+generate: ## Regenerates the SDK, then moves docs and tests to the root
+	@echo ">>> Generating Python SDK into src/codesphere_sdk..."
+	# Schritt 1: Code, Doku und Tests normal in das src-Verzeichnis generieren
 	uv run openapi-generator-cli generate \
 		-i ./openapi.json \
 		-g python \
-		-o ./src/codesphere_sdk \
+		-o ./src \
 		--additional-properties=packageName=codesphere_sdk,library=asyncio,generateSourceCodeOnly=true
+
+	@echo ">>> Moving generated documentation and test files to project root..."
+	mkdir -p ./docs
+	mkdir -p ./tests
+	rm -rf ./docs/api
+	rm -rf ./tests/generated
+	mv ./src/codesphere_sdk/docs ./docs/api
+	mv ./src/codesphere_sdk/test ./tests/generated
+	
+	@echo ">>> Cleanup and move complete."
