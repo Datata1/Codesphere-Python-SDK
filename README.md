@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://signup.codesphere.com/img/codesphere-circle.svg" alt="Codesphere API SDK Banner">
-</p>
-
 <h1 align="center">Codesphere Python SDK</h1>
 
 <p align="center">
@@ -29,6 +25,10 @@
   <a href="[LINK_TO_YOUR_LICENSE_FILE]">
     <img alt="License" src="https://img.shields.io/pypi/l/[your-pypi-package-name].svg?style=flat-square">
   </a>
+</p>
+
+<p align="center">
+  <img src="https://signup.codesphere.com/img/codesphere-circle.svg" alt="Codesphere API SDK Banner">
 </p>
 
 ---
