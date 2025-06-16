@@ -1,5 +1,6 @@
 import asyncio
 import os
+import pprint
 from codesphere_sdk import CodesphereClient, Team
 
 
@@ -9,7 +10,7 @@ async def main(api_token: str = ""):
     async with CodesphereClient(api_token) as client:
         teams: list[Team] = await client.teams.teams_list_teams()
         for team in teams:
-            print(f"- ID: {team.id}, Name: {team.name}")
+            pprint.pprint(team.model_dump())
 
 
 if __name__ == "__main__":
