@@ -63,16 +63,16 @@ release: ## pushes a new tag
 
 	@echo "\n>>> Verifying tag creation..."
 	export VERSION=$$(grep 'version = ' pyproject.toml | awk -F ' = ' '{print $$2}' | tr -d '"'); \
-	if git rev-parse "v${VERSION}" >/dev/null 2>&1; then \
-		echo "SUCCESS: Tag v${VERSION} successfully created locally."; \
+	if git rev-parse "v$${VERSION}" >/dev/null 2>&1; then \
+		echo "SUCCESS: Tag v$${VERSION} successfully created locally."; \
 	else \
-		echo "\033[0;31mERROR: cz bump FAILED to create tag v${VERSION}! Please check for errors.\033[0m"; \
+		echo "\033[0;31mERROR: cz bump FAILED to create tag v$${VERSION}! Please check for errors.\033[0m"; \
 		exit 1; \
 	fi
 
-	@echo "Created tag v${VERSION}"
+	@echo "Created tag v$${VERSION}"
 	git push --follow-tags
-	@echo "\n\033[0;32mSUCCESS: Tag v${VERSION} pushed to GitHub. The release workflow has been triggered.\033[0m"
+	@echo "\n\033[0;32mSUCCESS: Tag v$${VERSION} pushed to GitHub. The release workflow has been triggered.\033[0m"
 
 pypi: ## publishes to PyPI
 	@echo "\n>>> Building package for distribution..."
