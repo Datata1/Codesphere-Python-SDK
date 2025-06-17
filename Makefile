@@ -60,6 +60,7 @@ generate: ## Regenerates the SDK, then moves docs and tests to the root
 release: ## Pushes a new tag and release
 	@echo ">>> Starting release process..."
 	$(MAKE) bump
+	git config --global push.followTags true
 
 	@echo "\n>>> Verifying tag and pushing to remote..."
 	export VERSION=$$(uv run cz version --project); \
