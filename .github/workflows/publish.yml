@@ -7,7 +7,7 @@ on:
     tags:
       - 'v*'
 
-environment:
+env:
   UV_PUBLISH_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
 
 jobs:
