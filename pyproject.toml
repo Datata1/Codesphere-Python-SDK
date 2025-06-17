@@ -1,8 +1,9 @@
 [project]
-name = "codesphere-sdk"
+name = "codesphere"
 version = "0.1.0"
 description = "Use Codesphere within python scripts."
 readme = "README.md"
+license = { file="LICENSE" }
 authors = [
     { name = "Datata1", email = "jan-david.wiederstein@codesphere.com" }
 ]
@@ -14,6 +15,14 @@ dependencies = [
     "python-dateutil>=2.9.0.post0",
     "typing-extensions>=4.14.0",
     "urllib3>=2.4.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License", 
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 [build-system]
@@ -93,3 +102,8 @@ directory = "test-results"
 targets = ["src/codesphere_sdk/__init__.py"]  # add here folders to check
 exclude_dirs = ["tests", ".venv", ".uv", "examples", "docs", ".github", "scripts"]
 skips = ["B101"]
+
+[project.urls]
+Homepage = "https://codesphere.com/"
+Repository = "https://github.com/Datata1/codesphere-python-sdk"
+"Bug Tracker" = "https://github.com/Datata1/codesphere-python-sdk/issues"
