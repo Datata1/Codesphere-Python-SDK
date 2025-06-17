@@ -17,6 +17,12 @@
 - **readme**: readme
 - **initialize-project-setup**: auto generated openapi client and set up project
 
+## v0.3.1 (2025-06-17)
+
+### Fix
+
+- **workflow**: environment
+
 ## v0.3.0 (2025-06-17)
 
 ### Feat
