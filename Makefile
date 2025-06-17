@@ -41,7 +41,6 @@ bump: ## Bumps version, updates changelog, and creates a git tag
 
 generate: ## Regenerates the SDK, then moves docs and tests to the root
 	@echo ">>> Generating Python SDK into src/codesphere_sdk..."
-	# Schritt 1: Code, Doku und Tests normal in das src-Verzeichnis generieren
 	uv run openapi-generator-cli generate \
 		-i ./openapi.json \
 		-g python \
@@ -57,3 +56,16 @@ generate: ## Regenerates the SDK, then moves docs and tests to the root
 	mv ./src/codesphere_sdk/test ./tests/generated
 	
 	@echo ">>> Cleanup and move complete."
+
+release: ## pushes a new tag
+	@echo ">>> Starting release process..."
+	$(MAKE) bump
+	@echo "\n>>> Pushing new commit and tag to GitHub..."
+	git push --follow-tags
+
+pypi: ## publishes to PyPI
+	@echo "\n>>> Building package for distribution..."
+	uv build
+	@echo "\n>>> Publishing to PyPI..."
+	uv release
+	@echo "\n\033[0;32mPyPI release complete! The GitHub Action will now create the GitHub Release.\033[0m"
