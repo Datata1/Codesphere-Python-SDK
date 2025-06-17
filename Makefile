@@ -37,7 +37,7 @@ test: ## Runs tests with pytest
 
 bump: ## Bumps version, updates changelog, and creates a git tag
 	@echo ">>> Bumping version and generating changelog..."
-	uv run cz bump --changelog --no-tag
+	uv run cz bump --changelog -- --no-tag
 
 generate: ## Regenerates the SDK, then moves docs and tests to the root
 	@echo ">>> Generating Python SDK into src/codesphere_sdk..."
