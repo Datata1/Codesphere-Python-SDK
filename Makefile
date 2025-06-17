@@ -75,7 +75,8 @@ release: ## Pushes a new tag and release
 		exit 1; \
 	fi; \
 	echo "--- Pushing commit and tag to remote... ---"; \
-	git push origin "v$${VERSION}"; \
+	git tag "v$${VERSION}"; \
+	git push origin --tags; \
 	echo "\n\033[0;32m✅ SUCCESS: Tag v$${VERSION} pushed to GitHub. The release workflow has been triggered.\033[0m"
 
 pypi: ## publishes to PyPI
