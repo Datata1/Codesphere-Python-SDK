@@ -37,7 +37,7 @@ test: ## Runs tests with pytest
 
 bump: ## Bumps version, updates changelog, and creates a git tag
 	@echo ">>> Bumping version and generating changelog..."
-	uv run cz bump --changelog -- --no-tag
+	uv run cz bump --changelog
 
 generate: ## Regenerates the SDK, then moves docs and tests to the root
 	@echo ">>> Generating Python SDK into src/codesphere_sdk..."
@@ -60,9 +60,16 @@ generate: ## Regenerates the SDK, then moves docs and tests to the root
 release: ## pushes a new tag
 	@echo ">>> Starting release process..."
 	$(MAKE) bump
-	@echo "\n>>> Pushing new commit and tag to GitHub..."
-	VERSION = $(shell grep 'version = ' pyproject.toml | awk -F ' = ' '{print $$2}' | tr -d '"')
-	git tag "v${VERSION}"
+
+	@echo "\n>>> Verifying tag creation..."
+	VERSION=$$(grep 'version = ' pyproject.toml | awk -F ' = ' '{print $$2}' | tr -d '"'); \
+	if git rev-parse "v$$VERSION" >/dev/null 2>&1; then \
+		echo "SUCCESS: Tag v$$VERSION successfully created locally."; \
+	else \
+		echo "\033[0;31mERROR: cz bump FAILED to create tag v$$VERSION! Please check for errors.\033[0m"; \
+		exit 1; \
+	fi
+
 	@echo "Created tag v${VERSION}"
 	git push --follow-tags
 	@echo "\n\033[0;32mSUCCESS: Tag v${VERSION} pushed to GitHub. The release workflow has been triggered.\033[0m"

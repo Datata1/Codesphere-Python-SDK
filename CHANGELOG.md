@@ -1,3 +1,10 @@
+## v0.2.2 (2025-06-17)
+
+### Fix
+
+- **release**: release
+- **release**: release
+
 ## v0.2.1 (2025-06-17)
 
 ### Fix
