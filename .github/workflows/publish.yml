@@ -6,6 +6,8 @@ on:
   push:
     tags:
       - 'v*'
+    branches:
+      - main
 
 env:
   UV_PUBLISH_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
@@ -14,6 +16,9 @@ jobs:
   uv-example:
     name: python
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
