@@ -16,8 +16,8 @@ import json
 import pprint
 from pydantic import BaseModel, ConfigDict, ValidationError, field_validator
 from typing import Any, Optional
-from codesphere_sdk.models.problem import Problem
-from codesphere_sdk.models.workspaces_replica_logs_get_response import (
+from codesphere.models.problem import Problem
+from codesphere.models.workspaces_replica_logs_get_response import (
     WorkspacesReplicaLogsGetResponse,
 )
 from typing import Union, Set, Dict

@@ -13,84 +13,84 @@ Do not edit the class manually.
 """  # noqa: E501
 
 # import models into model package
-from codesphere_sdk.models.domains_get_domain200_response import (
+from codesphere.models.domains_get_domain200_response import (
     DomainsGetDomain200Response,
 )
-from codesphere_sdk.models.domains_get_domain200_response_certificate_request_status import (
+from codesphere.models.domains_get_domain200_response_certificate_request_status import (
     DomainsGetDomain200ResponseCertificateRequestStatus,
 )
-from codesphere_sdk.models.domains_get_domain200_response_custom_config import (
+from codesphere.models.domains_get_domain200_response_custom_config import (
     DomainsGetDomain200ResponseCustomConfig,
 )
-from codesphere_sdk.models.domains_get_domain200_response_dns_entries import (
+from codesphere.models.domains_get_domain200_response_dns_entries import (
     DomainsGetDomain200ResponseDnsEntries,
 )
-from codesphere_sdk.models.domains_get_domain200_response_domain_verification_status import (
+from codesphere.models.domains_get_domain200_response_domain_verification_status import (
     DomainsGetDomain200ResponseDomainVerificationStatus,
 )
-from codesphere_sdk.models.metadata_get_datacenters200_response_inner import (
+from codesphere.models.metadata_get_datacenters200_response_inner import (
     MetadataGetDatacenters200ResponseInner,
 )
-from codesphere_sdk.models.metadata_get_workspace_base_images200_response_inner import (
+from codesphere.models.metadata_get_workspace_base_images200_response_inner import (
     MetadataGetWorkspaceBaseImages200ResponseInner,
 )
-from codesphere_sdk.models.metadata_get_workspace_plans200_response_inner import (
+from codesphere.models.metadata_get_workspace_plans200_response_inner import (
     MetadataGetWorkspacePlans200ResponseInner,
 )
-from codesphere_sdk.models.metadata_get_workspace_plans200_response_inner_characteristics import (
+from codesphere.models.metadata_get_workspace_plans200_response_inner_characteristics import (
     MetadataGetWorkspacePlans200ResponseInnerCharacteristics,
 )
-from codesphere_sdk.models.problem import Problem
-from codesphere_sdk.models.problem_data import ProblemData
-from codesphere_sdk.models.teams_create_team_request import TeamsCreateTeamRequest
-from codesphere_sdk.models.teams_get_team200_response import TeamsGetTeam200Response
-from codesphere_sdk.models.teams_list_teams200_response_inner import (
+from codesphere.models.problem import Problem
+from codesphere.models.problem_data import ProblemData
+from codesphere.models.teams_create_team_request import TeamsCreateTeamRequest
+from codesphere.models.teams_get_team200_response import TeamsGetTeam200Response
+from codesphere.models.teams_list_teams200_response_inner import (
     TeamsListTeams200ResponseInner,
 )
-from codesphere_sdk.models.workspaces_create_workspace_request import (
+from codesphere.models.workspaces_create_workspace_request import (
     WorkspacesCreateWorkspaceRequest,
 )
-from codesphere_sdk.models.workspaces_execute_command200_response import (
+from codesphere.models.workspaces_execute_command200_response import (
     WorkspacesExecuteCommand200Response,
 )
-from codesphere_sdk.models.workspaces_execute_command_request import (
+from codesphere.models.workspaces_execute_command_request import (
     WorkspacesExecuteCommandRequest,
 )
-from codesphere_sdk.models.workspaces_get_workspace200_response import (
+from codesphere.models.workspaces_get_workspace200_response import (
     WorkspacesGetWorkspace200Response,
 )
-from codesphere_sdk.models.workspaces_get_workspace_status200_response import (
+from codesphere.models.workspaces_get_workspace_status200_response import (
     WorkspacesGetWorkspaceStatus200Response,
 )
-from codesphere_sdk.models.workspaces_git_head200_response import (
+from codesphere.models.workspaces_git_head200_response import (
     WorkspacesGitHead200Response,
 )
-from codesphere_sdk.models.workspaces_list_env_vars200_response_inner import (
+from codesphere.models.workspaces_list_env_vars200_response_inner import (
     WorkspacesListEnvVars200ResponseInner,
 )
-from codesphere_sdk.models.workspaces_logs200_response import WorkspacesLogs200Response
-from codesphere_sdk.models.workspaces_logs_get_response import WorkspacesLogsGetResponse
-from codesphere_sdk.models.workspaces_logs_get_response_data_inner import (
+from codesphere.models.workspaces_logs200_response import WorkspacesLogs200Response
+from codesphere.models.workspaces_logs_get_response import WorkspacesLogsGetResponse
+from codesphere.models.workspaces_logs_get_response_data_inner import (
     WorkspacesLogsGetResponseDataInner,
 )
-from codesphere_sdk.models.workspaces_pipeline_status200_response_inner import (
+from codesphere.models.workspaces_pipeline_status200_response_inner import (
     WorkspacesPipelineStatus200ResponseInner,
 )
-from codesphere_sdk.models.workspaces_pipeline_status200_response_inner_steps_inner import (
+from codesphere.models.workspaces_pipeline_status200_response_inner_steps_inner import (
     WorkspacesPipelineStatus200ResponseInnerStepsInner,
 )
-from codesphere_sdk.models.workspaces_replica_logs200_response import (
+from codesphere.models.workspaces_replica_logs200_response import (
     WorkspacesReplicaLogs200Response,
 )
-from codesphere_sdk.models.workspaces_replica_logs_get_response import (
+from codesphere.models.workspaces_replica_logs_get_response import (
     WorkspacesReplicaLogsGetResponse,
 )
-from codesphere_sdk.models.workspaces_server_logs200_response import (
+from codesphere.models.workspaces_server_logs200_response import (
     WorkspacesServerLogs200Response,
 )
-from codesphere_sdk.models.workspaces_server_logs_get_response import (
+from codesphere.models.workspaces_server_logs_get_response import (
     WorkspacesServerLogsGetResponse,
 )
-from codesphere_sdk.models.workspaces_update_workspace_request import (
+from codesphere.models.workspaces_update_workspace_request import (
     WorkspacesUpdateWorkspaceRequest,
 )

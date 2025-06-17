@@ -18,7 +18,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List
-from codesphere_sdk.models.workspaces_logs_get_response_data_inner import (
+from codesphere.models.workspaces_logs_get_response_data_inner import (
     WorkspacesLogsGetResponseDataInner,
 )
 from typing import Optional, Set

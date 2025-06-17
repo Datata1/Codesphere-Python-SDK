@@ -25,11 +25,11 @@ from urllib.parse import quote
 from typing import Tuple, Optional, List, Dict, Union
 from pydantic import SecretStr
 
-from codesphere_sdk.configuration import Configuration
-from codesphere_sdk.api_response import ApiResponse, T as ApiResponseT
-import codesphere_sdk.models
-from codesphere_sdk import rest
-from codesphere_sdk.exceptions import (
+from codesphere.configuration import Configuration
+from codesphere.api_response import ApiResponse, T as ApiResponseT
+import codesphere.models
+from codesphere import rest
+from codesphere.exceptions import (
     ApiValueError,
     ApiException,
 )
@@ -439,7 +439,7 @@ class ApiClient:
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(codesphere_sdk.models, klass)
+                klass = getattr(codesphere.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

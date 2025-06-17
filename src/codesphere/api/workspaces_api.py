@@ -15,44 +15,44 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from codesphere_sdk.models.workspaces_create_workspace_request import (
+from codesphere.models.workspaces_create_workspace_request import (
     WorkspacesCreateWorkspaceRequest,
 )
-from codesphere_sdk.models.workspaces_execute_command200_response import (
+from codesphere.models.workspaces_execute_command200_response import (
     WorkspacesExecuteCommand200Response,
 )
-from codesphere_sdk.models.workspaces_execute_command_request import (
+from codesphere.models.workspaces_execute_command_request import (
     WorkspacesExecuteCommandRequest,
 )
-from codesphere_sdk.models.workspaces_get_workspace200_response import (
+from codesphere.models.workspaces_get_workspace200_response import (
     WorkspacesGetWorkspace200Response,
 )
-from codesphere_sdk.models.workspaces_get_workspace_status200_response import (
+from codesphere.models.workspaces_get_workspace_status200_response import (
     WorkspacesGetWorkspaceStatus200Response,
 )
-from codesphere_sdk.models.workspaces_git_head200_response import (
+from codesphere.models.workspaces_git_head200_response import (
     WorkspacesGitHead200Response,
 )
-from codesphere_sdk.models.workspaces_list_env_vars200_response_inner import (
+from codesphere.models.workspaces_list_env_vars200_response_inner import (
     WorkspacesListEnvVars200ResponseInner,
 )
-from codesphere_sdk.models.workspaces_logs200_response import WorkspacesLogs200Response
-from codesphere_sdk.models.workspaces_pipeline_status200_response_inner import (
+from codesphere.models.workspaces_logs200_response import WorkspacesLogs200Response
+from codesphere.models.workspaces_pipeline_status200_response_inner import (
     WorkspacesPipelineStatus200ResponseInner,
 )
-from codesphere_sdk.models.workspaces_replica_logs200_response import (
+from codesphere.models.workspaces_replica_logs200_response import (
     WorkspacesReplicaLogs200Response,
 )
-from codesphere_sdk.models.workspaces_server_logs200_response import (
+from codesphere.models.workspaces_server_logs200_response import (
     WorkspacesServerLogs200Response,
 )
-from codesphere_sdk.models.workspaces_update_workspace_request import (
+from codesphere.models.workspaces_update_workspace_request import (
     WorkspacesUpdateWorkspaceRequest,
 )
 
-from codesphere_sdk.api_client import ApiClient, RequestSerialized
-from codesphere_sdk.api_response import ApiResponse
-from codesphere_sdk.rest import RESTResponseType
+from codesphere.api_client import ApiClient, RequestSerialized
+from codesphere.api_response import ApiResponse
+from codesphere.rest import RESTResponseType
 
 
 class WorkspacesApi:

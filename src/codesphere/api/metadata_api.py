@@ -15,19 +15,19 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from codesphere_sdk.models.metadata_get_datacenters200_response_inner import (
+from codesphere.models.metadata_get_datacenters200_response_inner import (
     MetadataGetDatacenters200ResponseInner,
 )
-from codesphere_sdk.models.metadata_get_workspace_base_images200_response_inner import (
+from codesphere.models.metadata_get_workspace_base_images200_response_inner import (
     MetadataGetWorkspaceBaseImages200ResponseInner,
 )
-from codesphere_sdk.models.metadata_get_workspace_plans200_response_inner import (
+from codesphere.models.metadata_get_workspace_plans200_response_inner import (
     MetadataGetWorkspacePlans200ResponseInner,
 )
 
-from codesphere_sdk.api_client import ApiClient, RequestSerialized
-from codesphere_sdk.api_response import ApiResponse
-from codesphere_sdk.rest import RESTResponseType
+from codesphere.api_client import ApiClient, RequestSerialized
+from codesphere.api_response import ApiResponse
+from codesphere.rest import RESTResponseType
 
 
 class MetadataApi:

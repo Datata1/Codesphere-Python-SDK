@@ -15,19 +15,19 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from codesphere_sdk.models.domains_get_domain200_response import (
+from codesphere.models.domains_get_domain200_response import (
     DomainsGetDomain200Response,
 )
-from codesphere_sdk.models.domains_get_domain200_response_custom_config import (
+from codesphere.models.domains_get_domain200_response_custom_config import (
     DomainsGetDomain200ResponseCustomConfig,
 )
-from codesphere_sdk.models.domains_get_domain200_response_domain_verification_status import (
+from codesphere.models.domains_get_domain200_response_domain_verification_status import (
     DomainsGetDomain200ResponseDomainVerificationStatus,
 )
 
-from codesphere_sdk.api_client import ApiClient, RequestSerialized
-from codesphere_sdk.api_response import ApiResponse
-from codesphere_sdk.rest import RESTResponseType
+from codesphere.api_client import ApiClient, RequestSerialized
+from codesphere.api_response import ApiResponse
+from codesphere.rest import RESTResponseType
 
 
 class DomainsApi:

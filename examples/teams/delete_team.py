@@ -1,7 +1,7 @@
 import asyncio
 import os
 import pprint
-from codesphere_sdk import CodesphereClient
+from codesphere import CodesphereClient
 
 
 async def main(team_id: int, api_token: str = ""):

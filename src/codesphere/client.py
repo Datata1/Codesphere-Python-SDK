@@ -27,7 +27,7 @@ class CodesphereClient:
         if not token:
             raise ValueError(
                 "API-Token muss entweder direkt oder über die Umgebungsvariable "
-                "'COSP_API_TOKEN' bereitgestellt werden."
+                "'CS_TOKEN' bereitgestellt werden."
             )
 
         configuration = Configuration(access_token=token)

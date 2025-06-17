@@ -15,15 +15,15 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from codesphere_sdk.models.teams_create_team_request import TeamsCreateTeamRequest
-from codesphere_sdk.models.teams_get_team200_response import TeamsGetTeam200Response
-from codesphere_sdk.models.teams_list_teams200_response_inner import (
+from codesphere.models.teams_create_team_request import TeamsCreateTeamRequest
+from codesphere.models.teams_get_team200_response import TeamsGetTeam200Response
+from codesphere.models.teams_list_teams200_response_inner import (
     TeamsListTeams200ResponseInner,
 )
 
-from codesphere_sdk.api_client import ApiClient, RequestSerialized
-from codesphere_sdk.api_response import ApiResponse
-from codesphere_sdk.rest import RESTResponseType
+from codesphere.api_client import ApiClient, RequestSerialized
+from codesphere.api_response import ApiResponse
+from codesphere.rest import RESTResponseType
 
 
 class TeamsApi:

@@ -20,7 +20,7 @@ from typing import Optional, Union
 import aiohttp
 import aiohttp_retry
 
-from codesphere_sdk.exceptions import ApiException, ApiValueError
+from codesphere.exceptions import ApiException, ApiValueError
 
 RESTResponseType = aiohttp.ClientResponse
 

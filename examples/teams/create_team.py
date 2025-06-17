@@ -1,8 +1,8 @@
 import asyncio
 import os
 import pprint
-from codesphere_sdk import CodesphereClient, Team
-from codesphere_sdk.models import TeamsCreateTeamRequest
+from codesphere import CodesphereClient, Team
+from codesphere.models import TeamsCreateTeamRequest
 
 
 async def main(api_token: str = ""):

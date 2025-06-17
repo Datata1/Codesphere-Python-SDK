@@ -18,7 +18,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List
-from codesphere_sdk.models.problem_data import ProblemData
+from codesphere.models.problem_data import ProblemData
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -27,7 +27,7 @@ from pydantic import (
 )
 from typing import Any, ClassVar, Dict, List, Union
 from typing_extensions import Annotated
-from codesphere_sdk.models.metadata_get_workspace_plans200_response_inner_characteristics import (
+from codesphere.models.metadata_get_workspace_plans200_response_inner_characteristics import (
     MetadataGetWorkspacePlans200ResponseInnerCharacteristics,
 )
 from typing import Optional, Set

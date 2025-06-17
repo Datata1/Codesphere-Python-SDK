@@ -20,7 +20,7 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from codesphere_sdk.models.workspaces_pipeline_status200_response_inner_steps_inner import (
+from codesphere.models.workspaces_pipeline_status200_response_inner_steps_inner import (
     WorkspacesPipelineStatus200ResponseInnerStepsInner,
 )
 from typing import Set

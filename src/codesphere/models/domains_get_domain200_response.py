@@ -19,16 +19,16 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from codesphere_sdk.models.domains_get_domain200_response_certificate_request_status import (
+from codesphere.models.domains_get_domain200_response_certificate_request_status import (
     DomainsGetDomain200ResponseCertificateRequestStatus,
 )
-from codesphere_sdk.models.domains_get_domain200_response_custom_config import (
+from codesphere.models.domains_get_domain200_response_custom_config import (
     DomainsGetDomain200ResponseCustomConfig,
 )
-from codesphere_sdk.models.domains_get_domain200_response_dns_entries import (
+from codesphere.models.domains_get_domain200_response_dns_entries import (
     DomainsGetDomain200ResponseDnsEntries,
 )
-from codesphere_sdk.models.domains_get_domain200_response_domain_verification_status import (
+from codesphere.models.domains_get_domain200_response_domain_verification_status import (
     DomainsGetDomain200ResponseDomainVerificationStatus,
 )
 from typing import Set
