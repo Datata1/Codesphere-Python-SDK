@@ -22,6 +22,8 @@ commit: ## Starts Commitizen for a guided commit message
 		exit 1; \
 	fi
 	uv run cz commit
+	uv run cz bump --changelog --allow-no-commit
+
 
 lint: ## Checks code quality with ruff
 	@echo ">>> Checking code quality with ruff..."
@@ -34,10 +36,7 @@ format: ## Formats code with ruff
 test: ## Runs tests with pytest
 	@echo ">>> Running tests with pytest..."
 	uv run pytest
-
-bump: ## Bumps version, updates changelog, and creates a git tag
-	@echo ">>> Bumping version and generating changelog..."
-	uv run cz bump --changelog
+	
 
 generate: ## Regenerates the SDK, then moves docs and tests to the root
 	@echo ">>> Generating Python SDK into src/codesphere_sdk..."
@@ -59,7 +58,6 @@ generate: ## Regenerates the SDK, then moves docs and tests to the root
 
 release: ## Pushes a new tag and release
 	@echo ">>> Starting release process..."
-	$(MAKE) bump
 	git config --global push.followTags true
 
 	@echo "\n>>> Verifying tag and pushing to remote..."
