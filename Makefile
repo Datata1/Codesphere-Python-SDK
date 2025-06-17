@@ -82,5 +82,5 @@ pypi: ## publishes to PyPI
 	@echo "\n>>> Building package for distribution..."
 	uv build
 	@echo "\n>>> Publishing to PyPI..."
-	uv release
+	uv publish
 	@echo "\n\033[0;32mPyPI release complete! The GitHub Action will now create the GitHub Release.\033[0m"
