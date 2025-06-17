@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://intelignite.com/wp-content/uploads/2022/10/logo_codesphere_dark-300x65.png" alt="Codesphere API SDK Banner" width="300">
+  <img src="https://ai.codesphere.com/img/codesphere-logo.png" alt="Codesphere API SDK Banner" width="300">
 </p>
 
 <h1 align="center">Codesphere Python SDK</h1>
