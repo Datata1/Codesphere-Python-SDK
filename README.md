@@ -11,7 +11,7 @@
   <a href="https://pypi.org/project/codesphere/">
     <img alt="PyPI Version" src="https://img.shields.io/pypi/v/codesphere.svg?style=flat-square&logo=pypi&logoColor=white">
   </a>
-  <a href="https://github.com/[your-github-username]/[your-repo-name]/actions/workflows/ci.yml">
+  <a href="https://github.com/Datata1/codesphere-python-sdk/actions/workflows/release.yml">
     <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/datata1/codesphere-python-sdk/ci.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white">
   </a>
   <a href="[LINK_TO_YOUR_CODECOV_REPORT_IF_ANY]">
@@ -23,7 +23,7 @@
   <a href="[LINK_TO_YOUR_DOCUMENTATION]">
     <img alt="Documentation" src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square">
   </a>
-  <a href="https://github.com/[your-github-username]/[your-repo-name]/releases/latest">
+  <a href="https://github.com/Datata1/codesphere-python-sdk/releases/latest">
     <img alt="Latest Release" src="https://img.shields.io/github/v/release/Datata1/codesphere-python-sdk?style=flat-square&logo=github&logoColor=white">
   </a>
   <a href="https://github.com/Datata1/Codesphere-Python-SDK/blob/main/LICENSE">
