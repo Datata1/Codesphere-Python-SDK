@@ -62,7 +62,7 @@ release: ## pushes a new tag
 	$(MAKE) bump
 
 	@echo "\n>>> Verifying tag creation..."
-	exort VERSION=$$(grep 'version = ' pyproject.toml | awk -F ' = ' '{print $$2}' | tr -d '"'); \
+	export VERSION=$$(grep 'version = ' pyproject.toml | awk -F ' = ' '{print $$2}' | tr -d '"'); \
 	if git rev-parse "v$$VERSION" >/dev/null 2>&1; then \
 		echo "SUCCESS: Tag v$$VERSION successfully created locally."; \
 	else \
