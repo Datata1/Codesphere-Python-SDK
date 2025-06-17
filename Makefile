@@ -62,11 +62,11 @@ release: ## pushes a new tag
 	$(MAKE) bump
 
 	@echo "\n>>> Verifying tag creation..."
-	export VERSION=$$(grep 'version = ' pyproject.toml | awk -F ' = ' '{print $$2}' | tr -d '"'); \
-	if git rev-parse "v$$VERSION" >/dev/null 2>&1; then \
-		echo "SUCCESS: Tag v$$VERSION successfully created locally."; \
+	export VERSION=$(grep 'version = ' pyproject.toml | awk -F ' = ' '{print $$2}' | tr -d '"'); \
+	if git rev-parse "v${VERSION}" >/dev/null 2>&1; then \
+		echo "SUCCESS: Tag v${VERSION} successfully created locally."; \
 	else \
-		echo "\033[0;31mERROR: cz bump FAILED to create tag v$$VERSION! Please check for errors.\033[0m"; \
+		echo "\033[0;31mERROR: cz bump FAILED to create tag v${VERSION}! Please check for errors.\033[0m"; \
 		exit 1; \
 	fi
 
