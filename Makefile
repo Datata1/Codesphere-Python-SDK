@@ -57,21 +57,26 @@ generate: ## Regenerates the SDK, then moves docs and tests to the root
 	
 	@echo ">>> Cleanup and move complete."
 
-release: ## pushes a new tag
-	@echo ">>> Starting release process..."
-	$(MAKE) bump
+release: ## Pushes a new tag and release
+    @echo ">>> Starting release process..."
+    $(MAKE) bump
 
-	@echo "\n>>> Verifying tag creation and pushing..."
-    export VERSION=$$(grep 'version = ' pyproject.toml | awk -F ' = ' '{print $$2}' | tr -d '"'); \
-    if git rev-parse "v$${VERSION}" >/dev/null 2>&1; then \
-        echo "SUCCESS: Tag v$${VERSION} successfully created locally."; \
-    else \
-        echo "\033[0;31mERROR: cz bump FAILED to create tag v$${VERSION}! Please check for errors.\033[0m"; \
+    @echo "\n>>> Verifying tag and pushing to remote..."
+    export VERSION=$$(uv run cz version --project); \
+    if [ -z "$${VERSION}" ]; then \
+        echo "\033[0;31mERROR: Could not determine version using 'cz version --project'.\033[0m"; \
         exit 1; \
     fi; \
-    echo "Created tag v$${VERSION}"; \
+    echo "--- Found project version: v$${VERSION} ---"; \
+    if git rev-parse "v$${VERSION}" >/dev/null 2>&1; then \
+        echo "--- Verified local tag v$${VERSION} exists. ---"; \
+    else \
+        echo "\033[0;31mERROR: Git tag v$${VERSION} was not found! Please check for errors.\033[0m"; \
+        exit 1; \
+    fi; \
+    echo "--- Pushing commit and tag to remote... ---"; \
     git push --follow-tags; \
-    echo "\n\033[0;32mSUCCESS: Tag v$${VERSION} pushed to GitHub. The release workflow has been triggered.\033[0m"
+    echo "\n\033[0;32m✅ SUCCESS: Tag v$${VERSION} pushed to GitHub. The release workflow has been triggered.\033[0m"
 
 pypi: ## publishes to PyPI
 	@echo "\n>>> Building package for distribution..."
