@@ -37,7 +37,7 @@ test: ## Runs tests with pytest
 
 bump: ## Bumps version, updates changelog, and creates a git tag
 	@echo ">>> Bumping version and generating changelog..."
-	uv run cz bump --changelog
+	uv run cz bump --changelog --no-tag
 
 generate: ## Regenerates the SDK, then moves docs and tests to the root
 	@echo ">>> Generating Python SDK into src/codesphere_sdk..."
@@ -61,7 +61,11 @@ release: ## pushes a new tag
 	@echo ">>> Starting release process..."
 	$(MAKE) bump
 	@echo "\n>>> Pushing new commit and tag to GitHub..."
+	VERSION = $(shell grep 'version = ' pyproject.toml | awk -F ' = ' '{print $$2}' | tr -d '"')
+	git tag "v${VERSION}"
+	@echo "Created tag v${VERSION}"
 	git push --follow-tags
+	@echo "\n\033[0;32mSUCCESS: Tag v${VERSION} pushed to GitHub. The release workflow has been triggered.\033[0m"
 
 pypi: ## publishes to PyPI
 	@echo "\n>>> Building package for distribution..."
