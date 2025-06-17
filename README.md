@@ -12,7 +12,7 @@
     <img alt="PyPI Version" src="https://img.shields.io/pypi/v/codesphere.svg?style=flat-square&logo=pypi&logoColor=white">
   </a>
   <a href="https://github.com/Datata1/codesphere-python-sdk/actions/workflows/publish.yml">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/datata1/codesphere-python-sdk/ci.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white">
+    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/datata1/codesphere-python-sdk/publish.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white">
   </a>
   <a href="[LINK_TO_YOUR_CODECOV_REPORT_IF_ANY]">
     <img alt="Code Coverage" src="https://img.shields.io/codecov/c/github/datata1/codesphere-python-sdk.svg?style=flat-square&logo=codecov&logoColor=white">
